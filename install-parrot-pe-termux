@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-parrot_version=5.1
+parrot_version=5.0.1
 username=parrot
 password=parrot
 parrot_mirror="https://deb.parrotsec.org/parrot"
