@@ -1,5 +1,23 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-parrot_version=5.0
+parrot_version=5.1
 username=parrot
 password=parrot
+
+#--------------------------------------
+
+# Detect architecture
+case $(dpkg --print-architecture) in
+  aarch64)
+    architecture="arm64" ;;
+  arm)
+	  architecture="armhf" ;;
+  *)
+    echo "Unsopported architecture"; exit 1;;
+esac
+
+# Download rootfs
+wget https://deb.parrotsec.org/parrot/iso/$parrot_version/Parrot-rootfs-${parrot_version}_$architecture.tar.xz 
+
+# Install Parrot
+proot --link2symlink tar -xf Parrot-rootfs-${parrot_version}_$architecture.tar.xz
