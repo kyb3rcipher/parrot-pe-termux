@@ -12,6 +12,8 @@ case $(dpkg --print-architecture) in
     architecture="arm64" ;;
   arm)
 	  architecture="armhf" ;;
+  i*86)
+    architecture="i386" ;;
   *)
     echo "Unsopported architecture"; exit 1;;
 esac
