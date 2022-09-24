@@ -27,7 +27,5 @@ cat > $PREFIX/bin/parrot-pe << EOM
 
 proot \
   -r $rootfs
-#  -w /home/\$user \
-#    sudo -u $user /bin/bash
 EOM
 chmod +x $PREFIX/bin/parrot-pe
