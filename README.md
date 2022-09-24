@@ -1,2 +1,2 @@
-# Parrot OS Pocket Edition - Termux
+# Parrot OS Pocket Edition - termux
 By: @kyb3rcipher
