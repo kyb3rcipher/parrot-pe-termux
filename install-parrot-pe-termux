@@ -15,8 +15,7 @@ case $(dpkg --print-architecture) in
 esac
 
 # Download rootfs
-#wget $parrot_mirror/iso/$parrot_version/Parrot-rootfs-${parrot_version}_$architecture.tar.xz 
-rootfs="rootfs/Parrot-rootfs-${parrot_version}_$architecture.tar.xz"
+wget $parrot_mirror/iso/$parrot_version/Parrot-rootfs-${parrot_version}_$architecture.tar.xz 
 
 # Install Parrot
 proot --link2symlink tar -xf $rootfs
