@@ -25,6 +25,9 @@ cat > $PREFIX/bin/parrot-pe << EOM
 #!/data/data/com.termux/files/usr/bin/bash
 
 proot \
-  -r $rootfs
+  -0 \
+  -r parrot-$architecture \
+  -b /dev \
+  -b /proc
 EOM
 chmod +x $PREFIX/bin/parrot-pe
