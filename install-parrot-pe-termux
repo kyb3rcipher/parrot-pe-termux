@@ -24,11 +24,14 @@ proot --link2symlink tar -xf $rootfs
 # Create launcher binary
 cat > $PREFIX/bin/parrot-pe << EOM
 #!/data/data/com.termux/files/usr/bin/bash
+# unset termux-exec cuz we're parrot
+unset LD_PRELOAD
 
 proot \
   -0 \
   -r parrot-$architecture \
   -b /dev \
   -b /proc
+  -b parrot-$architecture:/dev/shm
 EOM
 chmod +x $PREFIX/bin/parrot-pe
