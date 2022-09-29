@@ -34,4 +34,4 @@ proot \
   -b /proc
   -b $rootfs:/dev/shm
 EOM
-chmod +x $PREFIX/bin/parrot-pe
+chmod 777 $PREFIX/bin/parrot-pe
